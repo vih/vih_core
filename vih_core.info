@@ -1,0 +1,15 @@
+name = VIH Core
+core = 7.x
+package = VIH
+version = 7.x-0.1
+project = vih_core
+dependencies[] = features
+dependencies[] = navbar
+features[defaultconfig][] = user_default_roles:administrator
+features[defaultconfig][] = user_default_roles:kontor
+features[defaultconfig][] = user_default_roles:lærer
+features[features_api][] = api:2
+features[user_permission][] = access navbar
+features[user_role][] = kontor
+features[user_role][] = lærer
+features_exclude[dependencies][defaultconfig] = defaultconfig
