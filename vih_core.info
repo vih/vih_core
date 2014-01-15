@@ -3,6 +3,7 @@ core = 7.x
 package = VIH
 version = 7.x-0.1
 project = vih_core
+dependencies[] = adminrole
 dependencies[] = features
 dependencies[] = navbar
 features[defaultconfig][] = user_default_roles:kontor
