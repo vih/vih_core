@@ -5,7 +5,6 @@ version = 7.x-0.1
 project = vih_core
 dependencies[] = features
 dependencies[] = navbar
-features[defaultconfig][] = user_default_roles:administrator
 features[defaultconfig][] = user_default_roles:kontor
 features[defaultconfig][] = user_default_roles:lærer
 features[features_api][] = api:2
