@@ -17,7 +17,6 @@ function vih_core_user_default_permissions() {
       'administrator' => 'administrator',
       'kontor' => 'kontor',
       'lærer' => 'lærer',
-      'redaktør' => 'redaktør',
     ),
     'module' => 'navbar',
   );
