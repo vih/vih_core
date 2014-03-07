@@ -1,11 +1,21 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
  */
+
 /**
-* Implements hook_form_alter().
-*/
+ * Implements hook_field_default_field_bases_alter().
+ * Fix: https://drupal.org/comment/8555451#comment-8555451
+ */
+function vih_core_field_default_field_bases_alter(&$field_bases) {
+  if (!empty($field_bases['body'])) {
+    $field_bases['body']['translatable'] = 1;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
 function vih_core_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'mailchimp_lists_user_subscribe_form_nyhedsbrev') {
     if (module_exists('google_analytics')) {
@@ -45,8 +55,8 @@ _gaq.push(["_trackEvent", "Newsletter", "Subscribe", "UK"]);
 }
 
 /**
-* Implements hook_update_projects_alter().
-*/
+ * Implements hook_update_projects_alter().
+ */
 function vih_core_update_projects_alter(&$projects) {
   // We wish to remove our custom modules from any drupal.org updates.
   foreach($projects as $key => $project) {
