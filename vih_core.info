@@ -7,6 +7,7 @@ dependencies[] = adminrole
 dependencies[] = features
 dependencies[] = navbar
 features[features_api][] = api:2
+features[field_base][] = field_picture
 features[user_permission][] = access navbar
 features[user_role][] = kontor
 features[user_role][] = lærer
