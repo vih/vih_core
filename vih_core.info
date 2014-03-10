@@ -5,6 +5,7 @@ version = 7.x-0.1
 project = vih_core
 dependencies[] = adminrole
 dependencies[] = features
+dependencies[] = image
 dependencies[] = navbar
 features[features_api][] = api:2
 features[field_base][] = field_picture
