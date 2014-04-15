@@ -7,6 +7,7 @@ dependencies[] = adminrole
 dependencies[] = features
 dependencies[] = image
 dependencies[] = navbar
+dependencies[] = panopoly_wysiwyg
 features[features_api][] = api:2
 features[field_base][] = commerce_price
 features[field_base][] = commerce_stock
