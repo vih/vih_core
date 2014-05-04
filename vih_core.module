@@ -48,7 +48,7 @@ function vih_core_field_formatter_view($entity_type, $entity, $field, $instance,
  */
 function _vih_core_cpr_render($cpr) {
   global $user;
-  if (in_array('kontor', $user->roles)) {
+  if (in_array('office', $user->roles)) {
     return $cpr;
   }
   return round(vih_calculate_age(vih_get_birthday($cpr)), 0) . ' år';
