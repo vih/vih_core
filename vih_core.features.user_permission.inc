@@ -15,8 +15,8 @@ function vih_core_user_default_permissions() {
     'name' => 'access navbar',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'navbar',
   );
