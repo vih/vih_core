@@ -13,6 +13,7 @@ dependencies[] = mediafield
 dependencies[] = navbar
 dependencies[] = panopoly_wysiwyg
 dependencies[] = taxonomy
+dependencies[] = defaultconfig
 features[features_api][] = api:2
 features[field_base][] = field_course_leader
 features[field_base][] = field_course_time
