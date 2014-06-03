@@ -1,24 +1,13 @@
 <?php
 /**
  * @file
- * vih_commerce.features.defaultconfig.inc
+ * vih_core.features.user_permission.inc
  */
 
 /**
- * Implements hook_defaultconfig_features().
+ * Implements hook_user_default_permissions().
  */
-function vih_core_defaultconfig_features() {
-  return array(
-    'vih_core' => array(
-      'user_default_permissions' => 'user_default_permissions',
-    ),
-  );
-}
-
-/**
- * Implements hook_defaultconfig_user_default_permissions().
- */
-function vih_core_defaultconfig_user_default_permissions() {
+function vih_core_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'access navbar'.
