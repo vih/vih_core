@@ -7,9 +7,9 @@
 /**
  * Implements hook_defaultconfig_features().
  */
-function vih_commerce_defaultconfig_features() {
+function vih_core_defaultconfig_features() {
   return array(
-    'vih_commerce' => array(
+    'vih_core' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );
