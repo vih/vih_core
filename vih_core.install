@@ -3,3 +3,13 @@
  * @file
  */
 
+/**
+ * Remove the certain pane types from the list of allowed panes.
+ */
+function vih_core_update_7000() {
+  $allowed = variable_get('panels_page_allowed_types', array());
+  if (!empty($allowed['panopoly_widgets_general_content-piece_of_content'])) {
+    $allowed['panopoly_widgets_general_content-piece_of_content'] = 0;
+    variable_set('panels_page_allowed_types', $allowed);
+  }
+}
