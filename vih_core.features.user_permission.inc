@@ -22,5 +22,16 @@ function vih_core_user_default_permissions() {
     'module' => 'navbar',
   );
 
+  // Exported permission: 'mass mailing with views_send'.
+  $permissions['mass mailing with views_send'] = array(
+    'name' => 'mass mailing with views_send',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'office' => 'office',
+      'teacher' => 'teacher',
+    ),
+    'module' => 'views_send',
+  );
+
   return $permissions;
 }
