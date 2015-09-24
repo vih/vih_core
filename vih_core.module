@@ -57,3 +57,41 @@ function vih_core_update_projects_alter(&$projects) {
     }
   }
 }
+
+/**
+ * Returns the proper formats based on locale.
+ *
+ * @param string $locale
+ *
+ * @return mixed
+ */
+function vih_core_locale_date_formats($locale = NULL) {
+  // DA.
+  $formats['da'] = array(
+    'panopoly_time' => 'g:ia',
+    'panopoly_day' => 'j. M Y',
+    'long' => 'l, j. F, Y - H:i',
+    'medium' => 'D, d-m-Y - H:i',
+    'short' => 'd-m-Y - H:i',
+    'long_date_without_time' => 'l, j. F Y',
+    'month' => 'F',
+    'medium_date_without_time' => 'j. F, Y',
+  );
+  // EN
+  $formats['en'] = array(
+    'panopoly_time' => 'g:ia',
+    'panopoly_day' => 'F j, Y',
+    'long' => 'l, j F, Y - H:i',
+    'medium' => 'D, m/d/Y - H:i',
+    'short' => 'd/m/Y - H:i',
+    'long_date_without_time' => 'l, j. F Y',
+    'month' => 'F',
+    'medium_date_without_time' => 'j. F Y',
+  );
+
+  if ($locale && isset($formats[$locale])) {
+    return $formats[$locale];
+  }
+
+  return $formats;
+}
