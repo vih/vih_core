@@ -103,7 +103,7 @@ function vih_core_locale_date_formats_save() {
   $formats = vih_core_locale_date_formats();
   foreach ($formats as $langcode => $lang_formats) {
     foreach ($lang_formats as $type => $format) {
-      locale_date_format_save($langcode, $type, $format);
+      locale_date_format_save($langcode, 'date_format_' . $type, $format);
     }
   }
 }
