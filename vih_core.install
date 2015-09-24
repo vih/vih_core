@@ -4,6 +4,13 @@
  */
 
 /**
+ * Implements hook_install().
+ */
+function vih_core_install() {
+  vih_core_locale_date_formats_save();
+}
+
+/**
  * Remove the certain pane types from the list of allowed panes.
  */
 function vih_core_update_7000() {
@@ -12,4 +19,11 @@ function vih_core_update_7000() {
     $allowed['panopoly_widgets_general_content-piece_of_content'] = 0;
     variable_set('panels_page_allowed_types', $allowed);
   }
+}
+
+/**
+ * Update locale date formats per https://github.com/vih/vih-build/issues/45.
+ */
+function vih_core_update_7001() {
+  vih_core_locale_date_formats_save();
 }
